@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
 	</head>
 	<body class="is-preload">
 
@@ -34,6 +35,7 @@
 							<ul>
 								<li><a href="#Biography">Biography</a></li>
 								<li><a href="#Research">Research</a></li>
+								<li><a href="#Travels">Travels</a></li>
 								<li><a href="#Hobbies">Hobbies</a></li>
 								<li><a href="#Contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -50,7 +52,7 @@
 								<span class="image main"><img src="images/me_at_int.jpg" alt="" /></span>
 								<p> ABOVE IMAGE: Standing in front of the Isaac Newton Telescope after a long night of astronomy in November 2022, working on my PhD research.</p>
 								<p></p>
-								<p> I’m originally from Burntisland, Fife, Scotland. My interest in astrophysics grew during my academic studies and has since shaped my research focus, particularly on small solar system bodies.</p>
+								<p> I'm originally from Burntisland, Fife, Scotland. My interest in astrophysics grew during my academic studies and has since shaped my research focus, particularly on small solar system bodies.</p>
 								<p> I completed my BSc in Astrophysics at the University of Central Lancashire (UCLan; 2015–2019), where my undergraduate project focused on calculating the orbits and properties of near-Earth asteroids using data from the 0.7m Moses Holden Telescope (MHT) at Alston Observatory.</p>
 								<p> My interest in small solar system bodies led me to continue my studies with an MSc (by Research) in Astrophysics at UCLan (2019–2020). For this project, I designed and implemented an automatic detection system to search for solar system objects in data from NASA's STEREO mission.</p>
 								<p> Excited to continue exploring small solar system bodies, I began my PhD at Queen's University Belfast in October 2021. My research focused on Jupiter-family comets, where I conducted the largest study to date of their activity using data from the Asteroid Terrestrial-impact Last Alert System (ATLAS) survey to monitor their dust production rates as they approached perihelion. In addition, during an observing run at the Isaac Newton Telescope (INT) in November 2022, I used deep imaging to investigate asteroids on Jupiter-crossing orbits, searching for subtle cometary activity caused by low-level sublimation that are typically too faint to be detected by typical survey imaging. I completed my PhD in December 2024.</p>
@@ -76,6 +78,180 @@
 
 								</ul>
 
+							</article>
+
+						<!-- Travels -->
+							<article id="Travels">
+								<h2 class="major">Astronomical Travels</h2>
+								<p>Below is a map of the places I've lived and visited for my astronomical research.</p>
+								
+								<div id="map-container" style="width: 100%; height: 500px; position: relative; margin-bottom: 20px; border-radius: 5px; overflow: hidden;">
+									<div id="map" style="width: 100%; height: 100%;"></div>
+								</div>
+								
+								<div class="location-list" style="margin-top: 20px;">
+									<h3>My Astronomical Journey</h3>
+									<ul style="list-style-type: none; padding: 0;">
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">📍 Home:</span>
+											<span style="font-size: 1.1em;">Burntisland, Fife, Scotland</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">My hometown where my interest in astronomy began</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🎓 Education:</span>
+											<span style="font-size: 1.1em;">University of Central Lancashire, Preston</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">BSc and MSc in Astrophysics (2015-2020)</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🎓 Education:</span>
+											<span style="font-size: 1.1em;">Queen's University Belfast, Northern Ireland</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">PhD in Astrophysics focusing on Jupiter-family comets (2021-2024)</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🔭 Observatory:</span>
+											<span style="font-size: 1.1em;">Isaac Newton Telescope, La Palma, Canary Islands</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Research on Jupiter-crossing asteroids in November 2022</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🔭 Research Visit:</span>
+											<span style="font-size: 1.1em;">Oxford University</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Collaborative research visit</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🔭 Conference:</span>
+											<span style="font-size: 1.1em;">London</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Astronomy conference attendance</span>
+										</li>
+										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+											<span style="font-weight: bold; margin-right: 10px;">🔭 Research Visit:</span>
+											<span style="font-size: 1.1em;">Lowell Observatory, Flagstaff, Arizona</span>
+											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Research collaboration on small solar system bodies</span>
+										</li>
+									</ul>
+								</div>
+								
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+								<script>
+									// Wait for the page to load
+									document.addEventListener('DOMContentLoaded', function() {
+										// Initialize the map
+										const map = L.map('map').setView([51.5, -2.0], 3);
+										
+										// Add the OpenStreetMap tiles
+										L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+											maxZoom: 19,
+											attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+										}).addTo(map);
+										
+										// Define locations with coordinates and details
+										const locations = [
+											{
+												name: "Burntisland, Fife",
+												type: "Home",
+												coords: [56.0584, -3.2356],
+												description: "My hometown where my interest in astronomy began"
+											},
+											{
+												name: "University of Central Lancashire",
+												type: "Education",
+												coords: [53.7632, -2.7082],
+												description: "BSc and MSc in Astrophysics (2015-2020)"
+											},
+											{
+												name: "Queen's University Belfast",
+												type: "Education",
+												coords: [54.5844, -5.9342],
+												description: "PhD in Astrophysics (2021-2024)"
+											},
+											{
+												name: "Isaac Newton Telescope, La Palma",
+												type: "Observatory",
+												coords: [28.7606, -17.8854],
+												description: "Research on Jupiter-crossing asteroids in November 2022"
+											},
+											{
+												name: "Oxford University",
+												type: "Research Visit",
+												coords: [51.7548, -1.2544],
+												description: "Collaborative research visit"
+											},
+											{
+												name: "London",
+												type: "Conference",
+												coords: [51.5074, -0.1278],
+												description: "Astronomy conference attendance"
+											},
+											{
+												name: "Lowell Observatory, Flagstaff",
+												type: "Research Visit",
+												coords: [35.1983, -111.6513],
+												description: "Research collaboration on small solar system bodies"
+											}
+										];
+										
+										// Create custom markers for different location types
+										function getMarkerIcon(type) {
+											let iconUrl, iconSize;
+											
+											switch(type) {
+												case "Home":
+													return L.divIcon({
+														html: '🏠',
+														className: 'location-icon',
+														iconSize: [30, 30]
+													});
+												case "Education":
+													return L.divIcon({
+														html: '🎓',
+														className: 'location-icon',
+														iconSize: [30, 30]
+													});
+												case "Observatory":
+													return L.divIcon({
+														html: '🔭',
+														className: 'location-icon',
+														iconSize: [30, 30]
+													});
+												case "Research Visit":
+												case "Conference":
+													return L.divIcon({
+														html: '📊',
+														className: 'location-icon',
+														iconSize: [30, 30]
+													});
+												default:
+													return L.divIcon({
+														html: '📍',
+														className: 'location-icon',
+														iconSize: [30, 30]
+													});
+											}
+										}
+										
+										// Add markers for each location
+										locations.forEach(loc => {
+											const marker = L.marker(loc.coords, {
+												icon: getMarkerIcon(loc.type)
+											}).addTo(map);
+											
+											marker.bindPopup(`<strong>${loc.name}</strong><br>${loc.type}<br>${loc.description}`);
+										});
+										
+										// Create a line connecting the locations in chronological order
+										const chronologicalLocations = [0, 1, 2, 3, 4, 5, 6]; // Indices in chronological order
+										const journeyCoordinates = chronologicalLocations.map(i => locations[i].coords);
+										
+										const journeyLine = L.polyline(journeyCoordinates, {
+											color: '#3388ff',
+											weight: 2,
+											opacity: 0.6,
+											dashArray: '5, 5'
+										}).addTo(map);
+										
+										// Fit the map to show all locations
+										map.fitBounds(journeyCoordinates);
+									});
+								</script>
 							</article>
 
 						<!-- About -->
