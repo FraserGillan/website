@@ -12,6 +12,33 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+		<style>
+			/* Additional styles for the map */
+			#map-container {
+				width: 100%;
+				height: 500px;
+				position: relative;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				overflow: hidden;
+				border: 1px solid #444;
+			}
+			#map {
+				width: 100%;
+				height: 100%;
+			}
+			.location-icon {
+				font-size: 24px;
+				text-align: center;
+				line-height: 24px;
+			}
+			.location-list li {
+				transition: background-color 0.3s ease;
+			}
+			.location-list li:hover {
+				background-color: rgba(255, 255, 255, 0.05);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -71,190 +98,29 @@
 									<li><a href="https://orcid.org/0000-0003-4094-9408">ORCiD</a></li>
 									<li><a href="https://pure.qub.ac.uk/en/studentTheses/activity-in-jupiter-family-comets-and-asteroids-photometric-analy">Thesis</a></li>
 								</ul>
-								<p>aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-								<p>Publications</p>
-								<ul>
-									<li><a href="https://iopscience.iop.org/article/10.3847/PSJ/ad1394" target="_blank">Dust Production Rates in Jupiter-family Comets: A Two Year Study with ATLAS Photometry - A. Fraser Gillan et al 2024 Planet. Sci. J. 5 25</a></li>
-
-								</ul>
-
 							</article>
 
 						<!-- Travels -->
 							<article id="Travels">
-								<h2 class="major">Astronomical Travels</h2>
-								<p>Below is a map of the places I've lived and visited for my astronomical research.</p>
+								<h2 class="major">Travels</h2>
+								<p>My research and astronomical observations have taken me to various observatories and research facilities around the world. Below is a map of some key locations I've visited during my academic journey.</p>
 								
-								<div id="map-container" style="width: 100%; height: 500px; position: relative; margin-bottom: 20px; border-radius: 5px; overflow: hidden;">
-									<div id="map" style="width: 100%; height: 100%;"></div>
+								<!-- Map container -->
+								<div id="map-container">
+									<div id="map"></div>
 								</div>
 								
-								<div class="location-list" style="margin-top: 20px;">
-									<h3>My Astronomical Journey</h3>
-									<ul style="list-style-type: none; padding: 0;">
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">📍 Home:</span>
-											<span style="font-size: 1.1em;">Burntisland, Fife, Scotland</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">My hometown where my interest in astronomy began</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🎓 Education:</span>
-											<span style="font-size: 1.1em;">University of Central Lancashire, Preston</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">BSc and MSc in Astrophysics (2015-2020)</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🎓 Education:</span>
-											<span style="font-size: 1.1em;">Queen's University Belfast, Northern Ireland</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">PhD in Astrophysics focusing on Jupiter-family comets (2021-2024)</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🔭 Observatory:</span>
-											<span style="font-size: 1.1em;">Isaac Newton Telescope, La Palma, Canary Islands</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Research on Jupiter-crossing asteroids in November 2022</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🔭 Research Visit:</span>
-											<span style="font-size: 1.1em;">Oxford University</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Collaborative research visit</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🔭 Conference:</span>
-											<span style="font-size: 1.1em;">London</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Astronomy conference attendance</span>
-										</li>
-										<li style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-											<span style="font-weight: bold; margin-right: 10px;">🔭 Research Visit:</span>
-											<span style="font-size: 1.1em;">Lowell Observatory, Flagstaff, Arizona</span>
-											<span style="font-style: italic; font-size: 0.9em; color: #666; display: block; margin-top: 4px;">Research collaboration on small solar system bodies</span>
-										</li>
-									</ul>
-								</div>
-								
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-								<script>
-									// Wait for the page to load
-									document.addEventListener('DOMContentLoaded', function() {
-										// Initialize the map
-										const map = L.map('map').setView([51.5, -2.0], 3);
-										
-										// Add the OpenStreetMap tiles
-										L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-											maxZoom: 19,
-											attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-										}).addTo(map);
-										
-										// Define locations with coordinates and details
-										const locations = [
-											{
-												name: "Burntisland, Fife",
-												type: "Home",
-												coords: [56.0584, -3.2356],
-												description: "My hometown where my interest in astronomy began"
-											},
-											{
-												name: "University of Central Lancashire",
-												type: "Education",
-												coords: [53.7632, -2.7082],
-												description: "BSc and MSc in Astrophysics (2015-2020)"
-											},
-											{
-												name: "Queen's University Belfast",
-												type: "Education",
-												coords: [54.5844, -5.9342],
-												description: "PhD in Astrophysics (2021-2024)"
-											},
-											{
-												name: "Isaac Newton Telescope, La Palma",
-												type: "Observatory",
-												coords: [28.7606, -17.8854],
-												description: "Research on Jupiter-crossing asteroids in November 2022"
-											},
-											{
-												name: "Oxford University",
-												type: "Research Visit",
-												coords: [51.7548, -1.2544],
-												description: "Collaborative research visit"
-											},
-											{
-												name: "London",
-												type: "Conference",
-												coords: [51.5074, -0.1278],
-												description: "Astronomy conference attendance"
-											},
-											{
-												name: "Lowell Observatory, Flagstaff",
-												type: "Research Visit",
-												coords: [35.1983, -111.6513],
-												description: "Research collaboration on small solar system bodies"
-											}
-										];
-										
-										// Create custom markers for different location types
-										function getMarkerIcon(type) {
-											let iconUrl, iconSize;
-											
-											switch(type) {
-												case "Home":
-													return L.divIcon({
-														html: '🏠',
-														className: 'location-icon',
-														iconSize: [30, 30]
-													});
-												case "Education":
-													return L.divIcon({
-														html: '🎓',
-														className: 'location-icon',
-														iconSize: [30, 30]
-													});
-												case "Observatory":
-													return L.divIcon({
-														html: '🔭',
-														className: 'location-icon',
-														iconSize: [30, 30]
-													});
-												case "Research Visit":
-												case "Conference":
-													return L.divIcon({
-														html: '📊',
-														className: 'location-icon',
-														iconSize: [30, 30]
-													});
-												default:
-													return L.divIcon({
-														html: '📍',
-														className: 'location-icon',
-														iconSize: [30, 30]
-													});
-											}
-										}
-										
-										// Add markers for each location
-										locations.forEach(loc => {
-											const marker = L.marker(loc.coords, {
-												icon: getMarkerIcon(loc.type)
-											}).addTo(map);
-											
-											marker.bindPopup(`<strong>${loc.name}</strong><br>${loc.type}<br>${loc.description}`);
-										});
-										
-										// Create a line connecting the locations in chronological order
-										const chronologicalLocations = [0, 1, 2, 3, 4, 5, 6]; // Indices in chronological order
-										const journeyCoordinates = chronologicalLocations.map(i => locations[i].coords);
-										
-										const journeyLine = L.polyline(journeyCoordinates, {
-											color: '#3388ff',
-											weight: 2,
-											opacity: 0.6,
-											dashArray: '5, 5'
-										}).addTo(map);
-										
-										// Fit the map to show all locations
-										map.fitBounds(journeyCoordinates);
-									});
-								</script>
+								<h3>Key Research Locations</h3>
+								<ul class="location-list">
+									<li><strong>Burntisland, Fife, Scotland</strong> - My hometown</li>
+									<li><strong>University of Central Lancashire, Preston, UK</strong> - BSc and MSc studies</li>
+									<li><strong>Queen's University Belfast, Northern Ireland</strong> - PhD studies</li>
+									<li><strong>Isaac Newton Telescope, La Palma, Canary Islands</strong> - Observing run in November 2022</li>
+									<li><strong>Alston Observatory, Preston, UK</strong> - Undergraduate research</li>
+								</ul>
 							</article>
 
-						<!-- About -->
+						<!-- Hobbies -->
 							<article id="Hobbies">
 								<h2 class="major">Hobbies</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
@@ -353,7 +219,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									</ul>
 
 									<h4>Actions</h4>
@@ -538,7 +404,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Dr. A. Fraser Gillan. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
@@ -552,6 +418,58 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+			<script>
+				// Initialize the map when the Travels section is opened
+				document.querySelector('a[href="#Travels"]').addEventListener('click', function() {
+					setTimeout(function() {
+						// Initialize the map if it hasn't been initialized already
+						if (typeof map === 'undefined') {
+							var map = L.map('map').setView([55.1644, -3.1475], 5); // Centered on Scotland with zoom level 5
+							
+							// Add the OpenStreetMap tiles
+							L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+								maxZoom: 19,
+								attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+							}).addTo(map);
+							
+							// Add markers for key locations
+							// Hometown
+							L.marker([56.0583, -3.2333]).addTo(map)
+								.bindPopup('<strong>Burntisland, Fife</strong><br>My hometown')
+								.openPopup();
+							
+							// University locations
+							L.marker([53.7632, -2.7044]).addTo(map)
+								.bindPopup('<strong>University of Central Lancashire</strong><br>BSc and MSc studies');
+							
+							L.marker([54.5844, -5.9335]).addTo(map)
+								.bindPopup('<strong>Queen\'s University Belfast</strong><br>PhD studies');
+							
+							// Observatory locations
+							L.marker([28.7617, -17.8834]).addTo(map)
+								.bindPopup('<strong>Isaac Newton Telescope</strong><br>La Palma, Canary Islands');
+							
+							L.marker([53.8083, -2.6767]).addTo(map)
+								.bindPopup('<strong>Alston Observatory</strong><br>Preston, UK');
+						}
+						
+						// Force a resize/redraw of the map
+						map.invalidateSize();
+					}, 100);
+				});
+				
+				// Fix for map display issues when switching tabs
+				document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+					link.addEventListener('click', function() {
+						if (typeof map !== 'undefined') {
+							setTimeout(function() {
+								map.invalidateSize();
+							}, 100);
+						}
+					});
+				});
+			</script>
 
 	</body>
 </html>
