@@ -412,64 +412,70 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- BG -->
 			<div id="bg"></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-			<script>
-				// Initialize the map when the Travels section is opened
-				document.querySelector('a[href="#Travels"]').addEventListener('click', function() {
-					setTimeout(function() {
-						// Initialize the map if it hasn't been initialized already
-						if (typeof map === 'undefined') {
-							var map = L.map('map').setView([55.1644, -3.1475], 5); // Centered on Scotland with zoom level 5
-							
-							// Add the OpenStreetMap tiles
-							L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-								maxZoom: 19,
-								attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-							}).addTo(map);
-							
-							// Add markers for key locations
-							// Hometown
-							L.marker([56.0583, -3.2333]).addTo(map)
-								.bindPopup('<strong>Burntisland, Fife</strong><br>My hometown')
-								.openPopup();
-							
-							// University locations
-							L.marker([53.7632, -2.7044]).addTo(map)
-								.bindPopup('<strong>University of Central Lancashire</strong><br>BSc and MSc studies');
-							
-							L.marker([54.5844, -5.9335]).addTo(map)
-								.bindPopup('<strong>Queen\'s University Belfast</strong><br>PhD studies');
-							
-							// Observatory locations
-							L.marker([28.7617, -17.8834]).addTo(map)
-								.bindPopup('<strong>Isaac Newton Telescope</strong><br>La Palma, Canary Islands');
-							
-							L.marker([53.8083, -2.6767]).addTo(map)
-								.bindPopup('<strong>Alston Observatory</strong><br>Preston, UK');
-						}
-						
-						// Force a resize/redraw of the map
-						map.invalidateSize();
-					}, 100);
-				});
-				
-				// Fix for map display issues when switching tabs
-				document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-					link.addEventListener('click', function() {
-						if (typeof map !== 'undefined') {
-							setTimeout(function() {
-								map.invalidateSize();
-							}, 100);
-						}
-					});
-				});
-			</script>
+...
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-	</body>
+<!-- Leaflet.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+<!-- Map initialization script -->
+<script>
+  // Initialize the map when the Travels section is opened
+  document.querySelector('a[href="#Travels"]').addEventListener('click', function() {
+    setTimeout(function() {
+      // Initialize the map if it hasn't been initialized already
+      if (typeof map === 'undefined') {
+        var map = L.map('map').setView([55.1644, -3.1475], 5); // Centered on Scotland with zoom level 5
+        
+        // Add the OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        // Add markers for key locations
+        // Hometown
+        L.marker([56.0583, -3.2333]).addTo(map)
+          .bindPopup('<strong>Burntisland, Fife</strong><br>My hometown')
+          .openPopup();
+        
+        // University locations
+        L.marker([53.7632, -2.7044]).addTo(map)
+          .bindPopup('<strong>University of Central Lancashire</strong><br>BSc and MSc studies');
+        
+        L.marker([54.5844, -5.9335]).addTo(map)
+          .bindPopup('<strong>Queen\'s University Belfast</strong><br>PhD studies');
+        
+        // Observatory locations
+        L.marker([28.7617, -17.8834]).addTo(map)
+          .bindPopup('<strong>Isaac Newton Telescope</strong><br>La Palma, Canary Islands');
+        
+        L.marker([53.8083, -2.6767]).addTo(map)
+          .bindPopup('<strong>Alston Observatory</strong><br>Preston, UK');
+      }
+      
+      // Force a resize/redraw of the map
+      map.invalidateSize();
+    }, 100);
+  });
+  
+  // Fix for map display issues when switching tabs
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof map !== 'undefined') {
+        setTimeout(function() {
+          map.invalidateSize();
+        }, 100);
+      }
+    });
+  });
+</script>
+
+</body>
+
 </html>
